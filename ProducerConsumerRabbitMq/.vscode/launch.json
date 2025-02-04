@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Depurar Producer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Producer/bin/Debug/net9.0/Producer.dll",
+            "args":[],
+            "cwd": "${workspaceFolder}/Producer",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Depurar Consumer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build Consumer",
+            "program": "${workspaceFolder}/Consumer/bin/Debug/net9.0/Consumer.dll",
+            "args":[],
+            "cwd": "${workspaceFolder}/Consumer",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
