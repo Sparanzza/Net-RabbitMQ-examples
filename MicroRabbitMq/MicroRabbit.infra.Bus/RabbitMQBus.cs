@@ -93,7 +93,7 @@ public class RabbitMqBus : IEventBus
 
         try
         {
-            await ProccessEvent(eventName, message);
+            _ = ProccessEvent(eventName, message);
         }
         catch (Exception e)
         {
