@@ -13,6 +13,8 @@
     <ItemGroup>
       <ProjectReference Include="..\MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj" />
       <ProjectReference Include="..\MicroRabbit.infra.Bus\MicroRabbit.infra.Bus.csproj" />
+      <ProjectReference Include="..\Microservices\Banking\Application\MicroRabbit.Banking.Application\MicroRabbit.Banking.Application.csproj" />
+      <ProjectReference Include="..\Microservices\Banking\Data\MicroRabbitMq.Banking.Data\MicroRabbitMq.Banking.Data.csproj" />
     </ItemGroup>
 
 </Project>
