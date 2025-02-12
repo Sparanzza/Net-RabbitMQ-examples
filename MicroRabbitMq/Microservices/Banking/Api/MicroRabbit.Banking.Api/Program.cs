@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Register services
 
 
 // Add DbContext
@@ -14,19 +13,28 @@ builder.Services.AddDbContext<BankingDbContext>(options =>
 // Add controllers and Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen( c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "Banking Microservice", Version = "v1" });
+});
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
 
+// Register services
 DependencyContainer.RegisterServices(builder.Services);
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();
