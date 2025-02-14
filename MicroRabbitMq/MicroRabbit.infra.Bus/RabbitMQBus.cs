@@ -34,7 +34,7 @@ public class RabbitMqBus : IEventBus
         await using var channel = await connection.CreateChannelAsync();
 
         var eventName = @event.GetType().Name;
-        await channel.QueueDeclareAsync(queue: "hello",
+        await channel.QueueDeclareAsync(queue: eventName,
             durable: false,
             exclusive: false,
             autoDelete: false,
