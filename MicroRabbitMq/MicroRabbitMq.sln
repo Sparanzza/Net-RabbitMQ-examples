@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Api", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Application", "Microservices\Banking\Application\MicroRabbit.Banking.Application\MicroRabbit.Banking.Application.csproj", "{A346B352-5AFF-453D-952F-4CD93A46184E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbitMq.Banking.Data", "Microservices\Banking\Data\MicroRabbitMq.Banking.Data\MicroRabbitMq.Banking.Data.csproj", "{A0D91413-B7AC-4FF8-AF96-22087993AEEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Data", "Microservices\Banking\Data\MicroRabbit.Banking.Data\MicroRabbit.Banking.Data.csproj", "{A0D91413-B7AC-4FF8-AF96-22087993AEEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbitMq.Banking.Domain", "Microservices\Banking\Domain\MicroRabbitMq.Banking.Domain\MicroRabbitMq.Banking.Domain.csproj", "{160DF404-073C-4DD1-AAC5-2EDA6E3079CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Domain", "Microservices\Banking\Domain\MicroRabbit.Banking.Domain\MicroRabbit.Banking.Domain.csproj", "{160DF404-073C-4DD1-AAC5-2EDA6E3079CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.Api", "Microservices\Transfer\Api\MicroRabbit.Transfer.Api\MicroRabbit.Transfer.Api.csproj", "{D1E3AB25-671E-493B-AE6D-06B129A76735}"
 EndProject

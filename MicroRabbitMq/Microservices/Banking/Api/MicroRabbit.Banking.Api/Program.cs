@@ -1,10 +1,8 @@
 using MicroRabbit.Infra.IoC;
-using MicroRabbitMq.Banking.Data.Context;
+using MicroRabbit.Banking.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
 
 // Add DbContext
 builder.Services.AddDbContext<BankingDbContext>(options =>

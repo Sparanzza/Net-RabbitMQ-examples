@@ -1,4 +1,4 @@
-namespace MicroRabbitMq.Banking.Domain.Commands;
+namespace MicroRabbit.Banking.Domain.Commands;
 
 public class CreateTransferCommand : TransferCommand
 {

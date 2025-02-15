@@ -1,9 +1,9 @@
 using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Application.Models;
 using MicroRabbit.Domain.Core.Bus;
-using MicroRabbitMq.Banking.Domain.Commands;
-using MicroRabbitMq.Banking.Domain.Interfaces;
-using MicroRabbitMq.Banking.Domain.Models;
+using MicroRabbit.Banking.Domain.Commands;
+using MicroRabbit.Banking.Domain.Interfaces;
+using MicroRabbit.Banking.Domain.Models;
 
 namespace MicroRabbit.Banking.Application.Services;
 

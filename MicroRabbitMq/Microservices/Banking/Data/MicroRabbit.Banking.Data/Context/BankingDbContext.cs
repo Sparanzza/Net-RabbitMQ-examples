@@ -1,7 +1,7 @@
-using MicroRabbitMq.Banking.Domain.Models;
+using MicroRabbit.Banking.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace MicroRabbitMq.Banking.Data.Context;
+namespace MicroRabbit.Banking.Data.Context;
 
 public class BankingDbContext: DbContext
 {

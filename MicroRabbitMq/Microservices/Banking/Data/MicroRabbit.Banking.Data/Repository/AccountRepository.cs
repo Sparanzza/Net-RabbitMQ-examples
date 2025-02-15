@@ -1,8 +1,8 @@
-using MicroRabbitMq.Banking.Data.Context;
-using MicroRabbitMq.Banking.Domain.Interfaces;
-using MicroRabbitMq.Banking.Domain.Models;
+using MicroRabbit.Banking.Data.Context;
+using MicroRabbit.Banking.Domain.Interfaces;
+using MicroRabbit.Banking.Domain.Models;
 
-namespace MicroRabbitMq.Banking.Data.Repository;
+namespace MicroRabbit.Banking.Data.Repository;
 
 public class AccountRepository: IAccountRepository
 {

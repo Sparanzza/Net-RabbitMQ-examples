@@ -3,31 +3,39 @@ using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Application.Services;
 using MicroRabbit.Domain.Core.Bus;
 using MicroRabbit.infra.Bus;
-using MicroRabbitMq.Banking.Data.Context;
-using MicroRabbitMq.Banking.Data.Repository;
-using MicroRabbitMq.Banking.Domain.CommandHandlers;
-using MicroRabbitMq.Banking.Domain.Commands;
-using MicroRabbitMq.Banking.Domain.Events;
-using MicroRabbitMq.Banking.Domain.Interfaces;
+using MicroRabbit.Banking.Data.Context;
+using MicroRabbit.Banking.Data.Repository;
+using MicroRabbit.Banking.Domain.CommandHandlers;
+using MicroRabbit.Banking.Domain.Commands;
+using MicroRabbit.Banking.Domain.Interfaces;
+using MicroRabbit.Transfer.Application.Interfaces;
+using MicroRabbit.Transfer.Application.Services;
+using MicroRabbit.Transfer.Data.Context;
+using MicroRabbit.Transfer.Data.Repository;
+using MicroRabbit.Transfer.Domain.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace MicroRabbit.Infra.IoC;
 
-public class DependencyContainer
+public static class DependencyContainer
 {
     public static void RegisterServices(IServiceCollection services)
     {
         //Domain Bus
-        services.AddTransient<IEventBus, RabbitMqBus>();
-        
+        services.TryAddTransient<IEventBus, RabbitMqBus>();
+
         // Domain Banking Commands
-        services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler >();
-        
+        services.TryAddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
+
         //Application Services
-        services.AddTransient<IAccountService, AccountService>();
-        
-        //Data
-        services.AddTransient<IAccountRepository, AccountRepository>();
-        services.AddTransient<BankingDbContext>();
+        services.TryAddTransient<IAccountService, AccountService>();
+        services.TryAddTransient<ITransferService, TransferService>();
+
+        // Data (use Scoped for DbContext)
+        services.TryAddTransient<IAccountRepository, AccountRepository>();
+        services.TryAddTransient<ITransferRepository, TransferRepository>();
+        services.TryAddTransient<BankingDbContext>();
+        services.TryAddTransient<TransferDbContext>();
     }
 }

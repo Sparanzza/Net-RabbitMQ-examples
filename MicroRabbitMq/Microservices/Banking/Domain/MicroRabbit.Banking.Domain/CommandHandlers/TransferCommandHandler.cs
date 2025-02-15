@@ -1,9 +1,9 @@
 using MediatR;
+using MicroRabbit.Banking.Domain.Commands;
+using MicroRabbit.Banking.Domain.Events;
 using MicroRabbit.Domain.Core.Bus;
-using MicroRabbitMq.Banking.Domain.Commands;
-using MicroRabbitMq.Banking.Domain.Events;
 
-namespace MicroRabbitMq.Banking.Domain.CommandHandlers;
+namespace MicroRabbit.Banking.Domain.CommandHandlers;
 
 public class TransferCommandHandler : IRequestHandler<CreateTransferCommand, bool>
 {

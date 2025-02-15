@@ -1,6 +1,6 @@
 using MicroRabbit.Domain.Core.Commands;
 
-namespace MicroRabbitMq.Banking.Domain.Commands;
+namespace MicroRabbit.Banking.Domain.Commands;
 
 public abstract class TransferCommand: Command
 {

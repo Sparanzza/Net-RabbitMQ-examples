@@ -1,5 +1,5 @@
 using MicroRabbit.Banking.Application.Models;
-using MicroRabbitMq.Banking.Domain.Models;
+using MicroRabbit.Banking.Domain.Models;
 
 namespace MicroRabbit.Banking.Application.Interfaces;
 

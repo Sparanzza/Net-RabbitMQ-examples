@@ -1,10 +1,8 @@
 using Microsoft.Extensions.Configuration;
-
-namespace MicroRabbitMq.Banking.Data.Context;
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using System.IO;
+
+namespace MicroRabbit.Banking.Data.Context;
 
 // https://www.daveabrock.com/2021/01/19/config-top-level-programs/
 public class BankingDbContextFactory : IDesignTimeDbContextFactory<BankingDbContext>

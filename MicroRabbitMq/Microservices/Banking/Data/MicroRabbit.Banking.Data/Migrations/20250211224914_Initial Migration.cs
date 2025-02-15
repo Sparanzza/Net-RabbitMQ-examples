@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace MicroRabbitMq.Banking.Data.Migrations
+namespace MicroRabbit.Banking.Data.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

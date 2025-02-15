@@ -1,6 +1,6 @@
 using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Application.Models;
-using MicroRabbitMq.Banking.Domain.Models;
+using MicroRabbit.Banking.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroRabbit.Banking.Api.Controllers;
